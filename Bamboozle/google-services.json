@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "765698856038",
+    "firebase_url": "https://bamboozle-c07fb.firebaseio.com",
+    "project_id": "bamboozle-c07fb",
+    "storage_bucket": "bamboozle-c07fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765698856038:android:9e7ae8c135aa5351",
+        "android_client_info": {
+          "package_name": "com.pewpew.bamboozle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765698856038-89c6s3t8rlkd0jrsvuaieml3d4761bcr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCE_AKUornqCzl5cZDyplVxFDbaCovv4gU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
