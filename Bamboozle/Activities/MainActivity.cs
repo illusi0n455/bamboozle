@@ -8,6 +8,8 @@ using Firebase.Database;
 using System;
 using System.Linq;
 using Android.Content;
+using Android.Content.PM;
+using Plugin.Permissions;
 
 namespace Bamboozle
 {
@@ -16,6 +18,10 @@ namespace Bamboozle
 	{
 		private Dictionary<string, ChatContent> _chatList = new Dictionary<string, ChatContent>();
 		private ListView lstChats;
+		public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
+		{
+			PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+		}
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);

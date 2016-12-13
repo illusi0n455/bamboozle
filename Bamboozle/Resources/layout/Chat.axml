@@ -4,23 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="100">
-    <ListView
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="80"
-        android:id="@+id/lstMessages" />
-    <EditText
-        android:inputType="textMultiLine"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtMessage"
-        android:layout_weight="10" />
-    <Button
-        android:text="Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnSendMessage"
-        android:layout_weight="10" />
+  <ListView
+      android:minWidth="25px"
+      android:minHeight="25px"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="60"
+      android:id="@+id/lstMessages" />
+  <EditText
+      android:inputType="textMultiLine"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:minHeight="125dp"
+      android:layout_weight="30"
+      android:id="@+id/txtMessage"/>
+  <Button
+      android:text="Button"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="10"
+      android:id="@+id/btnSendMessage"/>
 </LinearLayout>

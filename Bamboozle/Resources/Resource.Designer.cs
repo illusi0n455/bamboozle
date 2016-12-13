@@ -180,6 +180,9 @@ namespace Bamboozle
 			// aapt resource value: 0x7f020018
 			public const int Icon = 2130837528;
 			
+			// aapt resource value: 0x7f020019
+			public const int send = 2130837529;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

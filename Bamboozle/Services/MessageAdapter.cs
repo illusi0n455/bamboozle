@@ -5,6 +5,8 @@ using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
 using static Android.App.ActionBar;
+using Com.Bumptech.Glide;
+using Firebase.Storage;
 
 namespace Bamboozle
 {
@@ -31,19 +33,28 @@ namespace Bamboozle
 			TextView message = view.FindViewById<TextView>(Resource.Id.txtBubbleText);
 			RelativeLayout messageBubble = view.FindViewById<RelativeLayout>(Resource.Id.lytBubble);
 			ImageView imgPhoto = view.FindViewById<ImageView>(Resource.Id.imgPhoto);
+			//Glide.With(_context).Load("").Into(imgPhoto);
+			if (item.Photo != "none")
+			{
+				//StorageReference storageReference = FirebaseStorage.Instance.GetReference(item.Photo);
+				Glide.With(_context).Load(item.Photo).Into(imgPhoto);
+				imgPhoto.Visibility = ViewStates.Visible;
+			}
+			else
+			{
+				imgPhoto.Visibility = ViewStates.Gone;
+			}
 			username.Text = item.From;
 			message.Text = item.Text;
 			if (item.From == FirebaseAuth.Instance.CurrentUser.Email)
 			{
 				view.SetGravity(GravityFlags.Right);
 				messageBubble.SetBackgroundResource(Resource.Drawable.bubble_green);
-				imgPhoto.Visibility = ViewStates.Visible;
 			}
 			else
 			{
 				view.SetGravity(GravityFlags.Left);
 				messageBubble.SetBackgroundResource(Resource.Drawable.bubble_yellow);
-				imgPhoto.Visibility = ViewStates.Gone;
 			}
 
 			return view;
