@@ -55,6 +55,7 @@ namespace Bamboozle
 				_messageList.Add(item.Object);
 			MessageAdapter chatAdapter = new MessageAdapter(this, _messageList);
 			lstMessages.Adapter = chatAdapter;
+			lstMessages.StackFromBottom = true;
 		}
 
 		public void OnCancelled(DatabaseError error)

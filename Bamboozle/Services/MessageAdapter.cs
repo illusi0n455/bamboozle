@@ -4,6 +4,7 @@ using Android.App;
 using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
+using static Android.App.ActionBar;
 
 namespace Bamboozle
 {
@@ -28,17 +29,21 @@ namespace Bamboozle
 
 			TextView username = view.FindViewById<TextView>(Resource.Id.txtBubbleFrom);
 			TextView message = view.FindViewById<TextView>(Resource.Id.txtBubbleText);
+			RelativeLayout messageBubble = view.FindViewById<RelativeLayout>(Resource.Id.lytBubble);
+			ImageView imgPhoto = view.FindViewById<ImageView>(Resource.Id.imgPhoto);
 			username.Text = item.From;
 			message.Text = item.Text;
 			if (item.From == FirebaseAuth.Instance.CurrentUser.Email)
 			{
-				view.SetGravity(GravityFlags.Left);
-				message.SetBackgroundResource(Resource.Drawable.bubble_yellow);
+				view.SetGravity(GravityFlags.Right);
+				messageBubble.SetBackgroundResource(Resource.Drawable.bubble_green);
+				imgPhoto.Visibility = ViewStates.Visible;
 			}
 			else
 			{
-				view.SetGravity(GravityFlags.Right);
-				message.SetBackgroundResource(Resource.Drawable.bubble_green);
+				view.SetGravity(GravityFlags.Left);
+				messageBubble.SetBackgroundResource(Resource.Drawable.bubble_yellow);
+				imgPhoto.Visibility = ViewStates.Gone;
 			}
 
 			return view;
