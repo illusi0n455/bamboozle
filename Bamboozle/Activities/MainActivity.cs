@@ -56,26 +56,7 @@ namespace Bamboozle
 		}
 		private async void DisplayChats()
 		{
-			//_chatList.Clear();
-			//HashSet<string> chatKeySet = new HashSet<string>();
-			//string user = new MailAddress(FirebaseAuth.Instance.CurrentUser.Email).User;
-			//var chatKeys = await FirebaseService.Client.Child("users").Child(user).Child("chats")
-			//	.OnceAsync<bool>();
-			//foreach (var chatkey in chatKeys)
-			//{
-			//	chatKeySet.Add(chatkey.Key);
-			//}
-			//var chats = await FirebaseService.Client.Child("chats").OnceAsync<ChatContent>();
-			//foreach (var chat in chats)
-			//{
-			//	if (chatKeySet.Contains(chat.Key))
-			//	{
-			//		_chatList.Add(chat.Key, chat.Object);
-			//	}
-			//}
 
-			//ChatAdapter chatAdapter = new ChatAdapter(this, _chatList.Values.ToList());
-			//lstChats.Adapter = chatAdapter;
 			_chatList.Clear();
 
 			var items = await FirebaseService.Client.Child("chats")
