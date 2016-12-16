@@ -84,6 +84,16 @@ namespace Bamboozle
 					}
 					else
 						txtMessage.Text = "";
+// limit the output to 500 characters
+// limit the output to 500 characters
+// limit the output to 500 characters
+// limit the output to 500 characters
+// limit the output to 500 characters
+// limit the output to 500 characters
+// limit the output to 500 characters
+// limit the output to 500 characters
+// limit the output to 500 characters
+// limit the output to 500 characters
 
 				}
 			}
