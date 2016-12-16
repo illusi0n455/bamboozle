@@ -10,6 +10,8 @@ using System.Linq;
 using Android.Content;
 using Android.Content.PM;
 using Plugin.Permissions;
+using System.Net.Mail;
+using Firebase.Xamarin.Database.Query;
 
 namespace Bamboozle
 {
@@ -18,6 +20,7 @@ namespace Bamboozle
 	{
 		private Dictionary<string, ChatContent> _chatList = new Dictionary<string, ChatContent>();
 		private ListView lstChats;
+		private Button btnAddChat;
 		public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
 		{
 			PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -32,7 +35,7 @@ namespace Bamboozle
 			}
 			SetContentView(Resource.Layout.Main);
 			lstChats = FindViewById<ListView>(Resource.Id.lstChats);
-			//TODO get chats from user
+			btnAddChat = FindViewById<Button>(Resource.Id.btnAddChat);
 			FirebaseDatabase.Instance.GetReference("chats").AddValueEventListener(this);
 			lstChats.ItemClick += (sender, e) =>
 			{
@@ -40,10 +43,39 @@ namespace Bamboozle
 				chatActivity.PutExtra("chatkey", _chatList.Keys.ToList()[e.Position]);
 				StartActivity(chatActivity);
 			};
+			btnAddChat.Click += delegate
+				 {
+					 StartActivity(typeof(AddChatActivity));
+				 };
+			btnAddChat.LongClick += delegate
+			{
+				FirebaseAuth.Instance.SignOut();
+				StartActivity(typeof(LoginActivity));
+				Finish();
+			};
 		}
-
 		private async void DisplayChats()
 		{
+			//_chatList.Clear();
+			//HashSet<string> chatKeySet = new HashSet<string>();
+			//string user = new MailAddress(FirebaseAuth.Instance.CurrentUser.Email).User;
+			//var chatKeys = await FirebaseService.Client.Child("users").Child(user).Child("chats")
+			//	.OnceAsync<bool>();
+			//foreach (var chatkey in chatKeys)
+			//{
+			//	chatKeySet.Add(chatkey.Key);
+			//}
+			//var chats = await FirebaseService.Client.Child("chats").OnceAsync<ChatContent>();
+			//foreach (var chat in chats)
+			//{
+			//	if (chatKeySet.Contains(chat.Key))
+			//	{
+			//		_chatList.Add(chat.Key, chat.Object);
+			//	}
+			//}
+
+			//ChatAdapter chatAdapter = new ChatAdapter(this, _chatList.Values.ToList());
+			//lstChats.Adapter = chatAdapter;
 			_chatList.Clear();
 
 			var items = await FirebaseService.Client.Child("chats")

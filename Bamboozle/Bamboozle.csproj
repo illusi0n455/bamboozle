@@ -186,6 +186,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\ChatActivity.cs" />
+    <Compile Include="Activities\AddChatActivity.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="Services\ChatAdapter.cs" />
     <Compile Include="Services\ChatContent.cs" />
@@ -197,6 +198,8 @@
     <Compile Include="Services\MessageAdapter.cs" />
     <Compile Include="Services\FirebaseService.cs" />
     <Compile Include="Services\MessageContent.cs" />
+    <Compile Include="Services\TempContent.cs" />
+    <Compile Include="Services\UserContent.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -226,6 +229,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ChatItem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AddChat.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

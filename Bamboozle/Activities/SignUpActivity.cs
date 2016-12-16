@@ -5,6 +5,9 @@ using Firebase.Auth;
 using Android.Gms.Tasks;
 using System;
 using Android.Views;
+using Firebase.Xamarin.Database.Query;
+using Firebase.Xamarin.Database;
+using System.Net.Mail;
 
 namespace Bamboozle
 {
@@ -31,9 +34,11 @@ namespace Bamboozle
 			};
 		}
 
-		private void SignUp(string email, string password)
+		private async void SignUp(string email, string password)
 		{
 			FirebaseAuth.Instance.CreateUserWithEmailAndPassword(email, password).AddOnCompleteListener(this);
+			string user = new MailAddress(email).User;
+			await FirebaseService.Client.Child("users").Child(user).PutAsync(new UserContent(etxtName.Text));
 		}
 
 		public void OnComplete(Task task)

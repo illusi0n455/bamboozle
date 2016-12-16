@@ -205,53 +205,65 @@ namespace Bamboozle
 			// aapt resource value: 0x7f070006
 			public const int auto = 2131165190;
 			
-			// aapt resource value: 0x7f070018
-			public const int btnLogin = 2131165208;
-			
-			// aapt resource value: 0x7f07000b
-			public const int btnSendMessage = 2131165195;
-			
-			// aapt resource value: 0x7f070017
-			public const int btnSignUp = 2131165207;
-			
 			// aapt resource value: 0x7f07001d
-			public const int btnSubmit = 2131165213;
+			public const int btnAddChat = 2131165213;
+			
+			// aapt resource value: 0x7f07000e
+			public const int btnAddMessage = 2131165198;
+			
+			// aapt resource value: 0x7f07001b
+			public const int btnLogin = 2131165211;
+			
+			// aapt resource value: 0x7f07000a
+			public const int btnSearch = 2131165194;
+			
+			// aapt resource value: 0x7f07000d
+			public const int btnSendMessage = 2131165197;
+			
+			// aapt resource value: 0x7f07001a
+			public const int btnSignUp = 2131165210;
+			
+			// aapt resource value: 0x7f070021
+			public const int btnSubmit = 2131165217;
 			
 			// aapt resource value: 0x7f070007
 			public const int dark = 2131165191;
 			
-			// aapt resource value: 0x7f070014
-			public const int etxtEmail = 2131165204;
+			// aapt resource value: 0x7f070017
+			public const int etxtEmail = 2131165207;
 			
-			// aapt resource value: 0x7f07001c
-			public const int etxtName = 2131165212;
+			// aapt resource value: 0x7f070020
+			public const int etxtName = 2131165216;
 			
-			// aapt resource value: 0x7f070016
-			public const int etxtPassword = 2131165206;
+			// aapt resource value: 0x7f070019
+			public const int etxtPassword = 2131165209;
+			
+			// aapt resource value: 0x7f070009
+			public const int etxtSearch = 2131165193;
 			
 			// aapt resource value: 0x7f070003
 			public const int icon_only = 2131165187;
 			
-			// aapt resource value: 0x7f070012
-			public const int imgLogo = 2131165202;
+			// aapt resource value: 0x7f070015
+			public const int imgLogo = 2131165205;
 			
-			// aapt resource value: 0x7f07000e
-			public const int imgPhoto = 2131165198;
+			// aapt resource value: 0x7f070011
+			public const int imgPhoto = 2131165201;
 			
 			// aapt resource value: 0x7f070008
 			public const int light = 2131165192;
 			
-			// aapt resource value: 0x7f070011
-			public const int linearLayout1 = 2131165201;
+			// aapt resource value: 0x7f070014
+			public const int linearLayout1 = 2131165204;
 			
-			// aapt resource value: 0x7f07001a
-			public const int lstChats = 2131165210;
+			// aapt resource value: 0x7f07001e
+			public const int lstChats = 2131165214;
 			
-			// aapt resource value: 0x7f070009
-			public const int lstMessages = 2131165193;
+			// aapt resource value: 0x7f07000b
+			public const int lstMessages = 2131165195;
 			
-			// aapt resource value: 0x7f07000c
-			public const int lytBubble = 2131165196;
+			// aapt resource value: 0x7f07000f
+			public const int lytBubble = 2131165199;
 			
 			// aapt resource value: 0x7f070002
 			public const int none = 2131165186;
@@ -259,29 +271,29 @@ namespace Bamboozle
 			// aapt resource value: 0x7f070004
 			public const int standard = 2131165188;
 			
-			// aapt resource value: 0x7f07000d
-			public const int txtBubbleFrom = 2131165197;
+			// aapt resource value: 0x7f070010
+			public const int txtBubbleFrom = 2131165200;
 			
-			// aapt resource value: 0x7f07000f
-			public const int txtBubbleText = 2131165199;
+			// aapt resource value: 0x7f070012
+			public const int txtBubbleText = 2131165202;
+			
+			// aapt resource value: 0x7f070016
+			public const int txtEmail = 2131165206;
+			
+			// aapt resource value: 0x7f07001c
+			public const int txtError = 2131165212;
+			
+			// aapt resource value: 0x7f07000c
+			public const int txtMessage = 2131165196;
+			
+			// aapt resource value: 0x7f07001f
+			public const int txtName = 2131165215;
+			
+			// aapt resource value: 0x7f070018
+			public const int txtPassword = 2131165208;
 			
 			// aapt resource value: 0x7f070013
-			public const int txtEmail = 2131165203;
-			
-			// aapt resource value: 0x7f070019
-			public const int txtError = 2131165209;
-			
-			// aapt resource value: 0x7f07000a
-			public const int txtMessage = 2131165194;
-			
-			// aapt resource value: 0x7f07001b
-			public const int txtName = 2131165211;
-			
-			// aapt resource value: 0x7f070015
-			public const int txtPassword = 2131165205;
-			
-			// aapt resource value: 0x7f070010
-			public const int txtTitle = 2131165200;
+			public const int txtTitle = 2131165203;
 			
 			// aapt resource value: 0x7f070005
 			public const int wide = 2131165189;
@@ -316,22 +328,25 @@ namespace Bamboozle
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Chat = 2130903040;
+			public const int AddChat = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int ChatBubble = 2130903041;
+			public const int Chat = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int ChatItem = 2130903042;
+			public const int ChatBubble = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int Login = 2130903043;
+			public const int ChatItem = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int Main = 2130903044;
+			public const int Login = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int SignUp = 2130903045;
+			public const int Main = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int SignUp = 2130903046;
 			
 			static Layout()
 			{
